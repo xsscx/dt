@@ -1,4 +1,7 @@
-CFLAGS += -Wall -O3
+C_FLAGS    ?= -Wall -O3 -framework IOKit -framework CoreFoundation $(CFLAGS)
+CC_FLAGS   ?= -arch arm64e
+IOS_CC     ?= xcrun -sdk iphoneos clang
+IOS_CFLAGS ?= -arch arm64e
 
 .PHONY: all clean
 
